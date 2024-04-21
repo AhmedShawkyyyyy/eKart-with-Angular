@@ -1,0 +1,210 @@
+<body>
+  <admin-navbar></admin-navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <admin-sidebar></admin-sidebar>
+      </div>
+
+      <div class="col-lg-10 col-md-8 col-sm-8 m-auto">
+        <div class="title">
+          <h2 animate__rollIn class="mt-5 mb-5 ">
+            <i>Update Product</i>
+          </h2>
+        </div>
+        <!-- <form action="" [formGroup]="product"> -->
+        <form action="">
+          <div class="col-11 m-auto d-flex align-items-center justify-content-start flex-wrap form rounded h-100 p-4">
+            <div *ngIf="message" id="alert" role="alert" class="alert col-12 text-center">{{message}} </div>
+            <div class="col-lg-4 col-md-12 col-sm-12  text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="NIKE" name="name"
+                  #name="ngModel" [(ngModel)]="product.name"
+                  [style.border]="name.touched && !name.value ? '1px solid red':''">
+                <div class=" mt-1 text-start" [ngStyle]="{color:'red'}" *ngIf="name.touched && !name.value">*this
+                  field
+                  is required</div>
+                <label for=" floatingInput" class="w-50">Product name</label>
+
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-12 col-sm-12 text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                  name="imageURL" #imageURL="ngModel" [(ngModel)]="product.imageURL"
+                  [style.border]="imageURL.touched && !imageURL.value ? '1px solid red':''">
+                <div class=" mt-1 text-start" [ngStyle]="{color:'red'}" *ngIf="imageURL.touched && !imageURL.value">
+                  *This
+                  field
+                  is required!</div>
+                <label for="floatingInput" class="w-25">ImageURL</label>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12 col-sm-12  text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="male or female" name="gender"
+                  #gender="ngModel" [(ngModel)]="product.gender"
+                  [style.border]="!gender.value && gender.touched? '1px solid red':''">
+                <div class="mt-1 text-start" [ngStyle]="{color:'red'}" *ngIf="!gender.value && gender.touched">this
+                  field
+                  is required</div>
+                <label for=" floatingInput" class="w-75">Product Gender</label>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12 col-sm-12  text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Running" name="category"
+                  #category="ngModel" [(ngModel)]="product.category"
+                  [style.border]="category.invalid && category.touched? '1px solid red':''">
+                <div class="mt-1 text-start" *ngIf="category.touched && !category.value" [ngStyle]="{color: 'red'}">This
+                  Field is Required!
+                </div>
+                <label for="floatingInput" class="w-75">Product
+                  Categary</label>
+
+              </div>
+            </div>
+
+            <div class=" col-lg-3 col-md-12 col-sm-12 text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Nike" name="brand"
+                  #brand="ngModel" [(ngModel)]="product.brand"
+                  [style.border]="!brand.value && brand.touched? '1px solid red':''">
+                <div class="mt-1 text-start" *ngIf="brand.touched && !brand.value " [ngStyle]="{color: 'red'}">*This
+                  field is required!</div>
+                <label for="floatingInput" class="w-75">Product Brand</label>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-12 col-sm-12 text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="250" name="price"
+                  #price="ngModel" [(ngModel)]="product.price"
+                  [style.border]="!price.value && price.touched? '1px solid red':''">
+                <div class="mt-1 text-start" *ngIf="price.touched && !price.value" [ngStyle]="{color: 'red'}">*This
+                  field is required!</div>
+
+                <label for="floatingInput" class="">Product Price</label>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-12 col-sm-12 text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="50" name="discountPrice"
+                  #discountPrice="ngModel" [(ngModel)]="product.discountPrice">
+                <label for="floatingInput" class="">Product Discount >>optional</label>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 col-sm-12  text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="[5,2,3,2]" name="size"
+                  #size="ngModel" [(ngModel)]="product.size"
+                  [style.border]="!size.value && size.touched? '1px solid red':''">
+                <div class="mt-1 text-start" *ngIf="size.touched && !size.value" [ngStyle]="{color: 'red'}">*This field
+                  is
+                  required!</div>
+                <label for="floatingInput" class="w-50">Available sizes</label>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 col-sm-12  text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="[ red , green , blue]"
+                  name="color" #color="ngModel" [(ngModel)]="product.color"
+                  [style.border]="!color.value && color.touched? '1px solid red':''">
+                <div class="mt-1 text-start" *ngIf="color.touched && !color.value" [ngStyle]="{color: 'red'}">*This
+                  field is
+                  required!</div>
+                <label for="floatingInput" class="w-50">Avaialble colores</label>
+              </div>
+            </div>
+
+            <div class="col-12  text-center form-input">
+              <div class="form-floating m-1">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                  style="height: 150px;" name="description" #description="ngModel" [(ngModel)]=" product.description"
+                  [style.border]="!description.value && description.touched? '1px solid red':''"></textarea>
+                <div class="mt-1 text-start" *ngIf="description.touched && !description.value"
+                  [ngStyle]="{color: 'red'}">*This field is
+                  required!</div>
+                <label for="floatingTextarea" class="w-25">Product Description</label>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <label class="switch-button" for="switch">
+                <span class="me-3"> is in inventory</span>
+                <div class="switch-outer">
+                  <input id="switch" type="checkbox" name="is_in_inventory" #is_in_inventory="ngModel"
+                    [(ngModel)]="product.is_in_inventory" (change)="onAvailabilityChange(product.is_in_inventory)">
+                  <div class=" button">
+                    <span value="true" class="button-toggle"></span>
+                    <span value="false" class="button-indicator"></span>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-2 col-md-12 col-sm-12 text-center form-input me-1">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="2" name="items_left"
+                  #items_left="ngModel" [(ngModel)]="product.items_left">
+
+                <label for="floatingInput">Items Left</label>
+              </div>
+            </div>
+
+            <div class="col-lg-2 text-center form-input me-5">
+              <span id="review">Review</span>
+              <div class="rating text-start">
+                <input value="5" id="star5" type="radio" (click)="reviewCount(5)">
+                <label title="text" for="star5"></label>
+                <input value="4" id="star4" type="radio" (click)="reviewCount(4)">
+                <label title="text" for="star4"></label>
+                <input value="3" id="star3" type="radio" (click)="reviewCount(3)">
+                <label title="text" for="star3"></label>
+                <input value="2" id="star2" type="radio" (click)="reviewCount(2)">
+                <label title="text" for="star2"></label>
+                <input value="1" id="star1" type="radio" (click)="reviewCount(1)">
+                <label title="text" for="star1"></label>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12 col-sm-12  text-center form-input">
+              <div class="form-floating m-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Nike" name="slug"
+                  #slug="ngModel" [(ngModel)]="product.slug"
+                  [style.border]="!slug.value && slug.touched? '1px solid red':''">
+                <div class="mt-1 text-start" *ngIf="slug.touched && !slug.value" [ngStyle]="{color: 'red'}">*This
+                  field is
+                  required!</div>
+                <label for="floatingInput" class="w-50">Product Slug</label>
+              </div>
+            </div>
+
+
+
+            <div class="col-12 mt-3 text-center d-flex justify-content-center">
+              <button routerLink="/list-of-products">
+                Cancel
+              </button>
+              <button (click)="update()" [disabled]=" !product.imageURL ||!product.description||!product.name||
+              !product.gender||!product.category||!product.brand||!product.brand||
+              !product.brand||!product.price||!product.size||!product.color||
+              !product.is_in_inventory||!product.review">
+                Update Product
+              </button>
+
+            </div>
+
+          </div>
+        </form>
+        <admin-footer></admin-footer>
+      </div>
+    </div>
+  </div>
+</body>

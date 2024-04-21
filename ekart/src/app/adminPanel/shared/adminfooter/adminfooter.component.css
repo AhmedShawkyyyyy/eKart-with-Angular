@@ -1,0 +1,10 @@
+#footer {
+  background-color: #191c24;
+  color: #6c7293;
+  & a {
+    color: #eb1616;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

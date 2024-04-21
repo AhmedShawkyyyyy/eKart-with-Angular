@@ -1,0 +1,94 @@
+body {
+  background-color: #000000;
+}
+#revenue {
+  background-color: #191c24 !important;
+  color: #6c7293;
+  & h6 {
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  & i {
+    color: #eb1616 !important;
+  }
+}
+
+#tabledata {
+  background-color: #191c24 !important ;
+  & h6 {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  & a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #eb1616;
+  }
+}
+.table-responsive {
+  background-color: #191c24 !important ;
+}
+
+#table {
+  background-color: #191c24 !important;
+}
+table * {
+  border-color: #000000;
+}
+
+#tabledate .table-responsive thead th {
+  font-weight: 500 !important;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 10px;
+  border-radius: 2px;
+}
+#table thead,
+#table tbody {
+  background-color: #191c24 !important;
+  & tr {
+    background-color: #191c24 !important;
+    & td {
+      background-color: #191c24 !important;
+      color: #6c7293;
+    }
+    & th {
+      background-color: #191c24 !important;
+      color: #ffffff;
+    }
+  }
+}
+#tabledate .table-responsive td.active,
+#tabledate .table-responsive td.active:hover {
+  background: #eb1616 !important;
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+  border-bottom-color: var(--primary);
+}
+
+#details {
+  color: #fff !important;
+  background-color: #eb1616;
+  border-color: #eb1616;
+}
+#custom-checkbox {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  appearance: none;
+}
+
+#custom-checkbox:checked {
+  background-color: red !important;
+  outline-color: #eb1616 !important;
+}
+/* =================== */

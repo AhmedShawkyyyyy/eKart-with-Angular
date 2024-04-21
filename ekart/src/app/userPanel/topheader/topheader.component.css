@@ -1,0 +1,26 @@
+.top-header {
+  height: 5vh;
+  background-color: #28282b;
+  text-align: center;
+  color: #ffffff;
+  padding: 1.5vh 0;
+
+  position: fixed;
+  display: block;
+  top: 0px;
+  width: 100%;
+  z-index: 384354343541354;
+}
+
+.top-header p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.top-header .left-side i {
+  float: left;
+  margin-left: 10px;
+  font-weight: normal;
+  font: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+div {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+div ul li a {
+  transition: scale 0.2s ease-in-out;
+  font-size: 13px;
+}
+
+div ul li a:hover {
+  scale: 1.1 1.1;
+  color: rgb(57, 57, 57);
+}
+#logOut {
+  color: rgb(57, 57, 57);
+  font-size: 20px;
+  text-align: center;
+}

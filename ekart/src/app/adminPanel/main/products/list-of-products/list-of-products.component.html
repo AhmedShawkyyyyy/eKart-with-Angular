@@ -1,0 +1,100 @@
+<body>
+  <admin-navbar></admin-navbar>
+  <div class="container-fluid pt-4 px-4">
+    <div class="row g-4 d-flex justify-content-between m-auto">
+      <div class="col-1">
+        <admin-sidebar></admin-sidebar>
+      </div>
+      <div class="col-10">
+
+        <!-- Table Start -->
+        <div class=" container-fluid pt-4 px-4">
+          <div class="rounded p-4" id="tabledata">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h6 class="mb-0">Recent Salse</h6>
+              <a href="">Show All</a>
+            </div>
+
+
+
+            <div class="table-responsive text-start">
+              <table class="table" id="table">
+                <thead class="text-start">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">imageURL</th>
+                    <th scope="col">description</th>
+                    <th scope="col">brand</th>
+                    <th scope="col">gender</th>
+                    <th scope="col">category</th>
+                    <th scope="col">sizes</th>
+                    <th scope="col">colors</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Discount Price</th>
+                    <th scope="col">Items left</th>
+                    <th scope="col">is in inventory</th>
+                    <th scope="col">slug</th>
+                    <th scope="col">review</th>
+                    <th scope="col" colspan="2">ِAction</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center" *ngFor="let product of products">
+                  <tr>
+                    <td>{{product.id}}</td>
+                    <td>{{product.name | slice:0:10}}</td>
+                    <td>
+                      <img [src]="product.imageURL" alt="">
+                    </td>
+                    <td>{{product.description | slice:0:10}}</td>
+                    <td>{{product.brand}}</td>
+                    <td>{{product.gender}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.size}}</td>
+                    <td>{{product.color}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.discountPrice}}</td>
+                    <td>{{product.items_left}}</td>
+                    <td>{{product.is_in_inventory}}</td>
+                    <td>{{product.slug | slice:0:10}}</td>
+                    <td>{{product.review}}</td>
+                    <td>
+                      <i class="fa-solid fa-pen-to-square m-2" routerLink="/edit_products/{{ product.id }}"></i>
+                      <i class="fa-solid fa-trash-can m-2" (click)="removeProduct(product.id)"
+                        [ngStyle]="{'color':'#eb1616'}"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+
+
+          </div>
+        </div>
+        <!-- Table End -->
+        <!-- last section start -->
+        <div class="col-12">
+          <admin-footer></admin-footer>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<div class="overlay" *ngIf="showMessage" id="overlay" (click)="closeOverlay()">
+</div>
+<div class=" message d-flex justify-content-between flex-nowrap flex-column" *ngIf="showMessage" id="message">
+  <div class="close">
+    <i class=" fa-solid fa-xmark" id="closeTool" (click)="closeMessage()"></i>
+  </div>
+  <div class="body mt-1">
+    <p>are you sure you want to Delete this Product ! </p>
+  </div>
+  <div class="buttons">
+    <button (click)="confirmRemove()" id="confirm">confirm</button>
+    <button (click)="closeMessage()" id="cancel">cancel</button>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@angular/animations": "^17.3.1",
+    "animate.css": "^4.1.1",
+    "ngx-toastr": "^18.0.0"
+  }
+}

@@ -1,0 +1,98 @@
+<body>
+  <admin-navbar></admin-navbar>
+  <div class="container-fluid pt-4 px-4">
+    <div class="row g-4 d-flex justify-content-between m-auto">
+      <div class="col-1">
+        <admin-sidebar></admin-sidebar>
+      </div>
+      <div class="col-10">
+
+        <!-- Table Start -->
+        <div class=" container-fluid pt-4 px-4">
+          <div class="rounded p-4" id="tabledata">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h6 class="mb-0">Recent Salse</h6>
+              <a href="">Show All</a>
+            </div>
+
+
+
+            <div class="table-responsive text-start">
+              <table class="table" id="table">
+                <thead class="text-start">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">email</th>
+                    <th scope="col">gender</th>
+                    <th scope="col">password</th>
+                    <th scope="col">Confirm Password</th>
+                    <th scope="col">role</th>
+                    <th scope="col">ِAction</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center" *ngFor="let user of users">
+                  <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.firstname}}</td>
+                    <td>{{user.lastname}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.password}}</td>
+                    <td>{{user.confirmpassword}}</td>
+                    <td>{{user.role}}</td>
+                    <td>
+                      <i class="fa-solid fa-pen-to-square m-2" title="change Role of Account"></i>
+                      <i class="fa-solid fa-trash-can m-2" [ngStyle]="{'color':'#eb1616'}" title=" remove Account"
+                        (click)="removeUser(user.id)"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Table End -->
+        <!-- last section start -->
+        <div class="col-12">
+          <admin-footer></admin-footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- ================ delete message================ -->
+
+<div class="overlay" *ngIf="showDeleteMessage" id="overlayDelete" (click)="closeDeleteOverlay()"></div>
+<div class="message d-flex justify-content-between flex-nowrap flex-column" *ngIf="showDeleteMessage" id="message">
+  <div class="close  mt-1 me-3">
+    <i class="fa-solid fa-xmark" id="closeTool" (click)="closeDeleteMessage()"></i>
+  </div>
+  <div class="body mt-1">
+    <p>Are you sure you want to delete this User?</p>
+  </div>
+  <div class="buttons">
+    <button id="confirm" (click)="confirmRemove()">Confirm</button>
+    <button id="cancel" (click)="closeDeleteMessage()">Cancel</button>
+  </div>
+</div>
+
+<!-- ================ change role message================ -->
+
+<!-- <div class="overlay" *ngIf="showChangeRoleMessage" id="overlayDelete" (click)="closeDeleteOverlay()">
+</div>
+<div class="message d-flex justify-content-between flex-nowrap flex-column" *ngIf="showChangeRoleMessage" id="message">
+  <div class="close  mt-1 me-3">
+    <i class="fa-solid fa-xmark" id="closeTool" (click)="CloseChangeRoleMessage()"></i>
+  </div>
+  <div class="body mt-1">
+    <p>Are you sure you want to Change Role this User?</p>
+  </div>
+  <div class="buttons">
+    <button id="confirm" (click)="confirmChangeRole()">Confirm</button>
+    <button id="cancel" (click)="confirmChangeRole()">Cancel</button>
+  </div>
+</div> -->

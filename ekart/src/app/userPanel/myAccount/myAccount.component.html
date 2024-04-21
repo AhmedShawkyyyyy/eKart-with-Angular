@@ -1,0 +1,106 @@
+<app-topheader></app-topheader>
+<app-header></app-header>
+
+
+<section id="contact" class="contact section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Contact Us</p>
+    </div>
+
+    <div class="row">
+
+
+
+      <div class="col-lg-6">
+        <form method="post" role="form" class="php-email-form" *ngIf="users">
+          <div class=" col-12" id="userImage">
+            <img src="assets/images/pngegg (3).png" alt="" class="img-fluid">
+            <i class="fa-solid fa-pen"></i>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="">First Name</label>
+              <input type="text" name="firstname" #firstname="ngModel" [(ngModel)]="users.firstname"
+                class="form-control" id="name" placeholder="Your First Name" required value="{{users.firstname}}"
+                [style.border]="!firstname.value?'2px solid red':''">
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="">Last Name</label>
+              <input type="email" class="form-control" name="lastname" #lastname="ngModel" [(ngModel)]="users.lastname"
+                id="email" placeholder="Your Last Name" required value="{{users.lastname}}"
+                [style.border]="!lastname.value?'2px solid red':''">
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="">Email</label>
+            <input type="text" class="form-control" name="email" #email="ngModel" [(ngModel)]="users.email" id="subject"
+              placeholder="Your Email" required disabled value="{{users.email}}">
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6 form-group">
+              <label for="">UserName</label>
+              <input type="text" name="username" #username="ngModel" [(ngModel)]="users.username" class="form-control"
+                id="name" placeholder="Your User Name" required name="username" value="{{users.username}}"
+                [style.border]="!username.value?'2px solid red':''">
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="">User Gender</label>
+              <input type="email" class="form-control" name="gender" #gender="ngModel" [(ngModel)]="users.gender"
+                id="email" placeholder="Your Gender" required value="{{users.gender}}"
+                [style.border]="!gender.value?'2px solid red':''">
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6 form-group">
+              <label for="">Password</label>
+              <input type="text" name="password" #password="ngModel" [(ngModel)]="users.password" class="form-control"
+                id="name" placeholder="Your Password" required value="{{users.password}}"
+                [style.border]="!password.value?'2px solid red':''" minlength="7">
+              <span *ngIf="password.errors" [ngStyle]="{'color':'red'}">Password must be more than 7 charachers</span>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="">Confirm Password</label>
+              <input type="email" class="form-control" name="confirmpassword" #confirmpassword="ngModel"
+                [(ngModel)]="users.confirmpassword" id="email" placeholder="Your Confirm Password" required
+                value="{{users.confirmpassword}}" [style.border]="!confirmpassword.value?'2px solid red':''"
+                minlength="7">
+              <span *ngIf="confirmpassword.errors" [ngStyle]="{'color':'red'}">Password must be more than 7
+                charachers</span>
+
+            </div>
+          </div>
+          <div class="row mt-3"
+            *ngIf="!users.firstname ||!users.lastname|| !users.username|| !users.gender|| !users.password|| !users.confirmpassword ">
+            <div class="col-6">
+              <p [ngStyle]="{'color':'red'}"> *one or more of the last fields are required</p>
+            </div>
+          </div>
+          <div class="text-center mt-5">
+            <button type="submit" (click)=" updateUserInfo()"
+              [disabled]="!users.firstname ||!users.lastname|| !users.username|| !users.gender|| !users.password|| !users.confirmpassword ">Update</button>
+          </div>
+        </form>
+      </div>
+
+
+      <div class=" col-lg-6">
+
+        <div class="row">
+          <div class="col-md-12">
+            <img src="assets/images/contactus/shop-banner.png" alt="" class="img-fluid">
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,104 @@
+.container {
+  margin-top: 150px;
+}
+
+#smallImages {
+  height: 55px;
+  width: 55px;
+  padding: 2px;
+  border-radius: 7px;
+}
+#smallImages:hover {
+  border: 1px solid rgb(202, 202, 202);
+  background-color: gray;
+}
+#smallImagesGallary {
+  width: 100px;
+  flex-direction: column;
+}
+#bigImageGallery {
+  /* height: 572px; */
+  background-color: rgb(245, 245, 245);
+  border-radius: 12px;
+}
+#bigImageGallery image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ================= */
+#shoeColor {
+  border-radius: 6px;
+  max-height: 80px;
+  cursor: pointer;
+  padding: 2px;
+}
+#shoeColor:hover {
+  border: 1px solid rgb(17, 17, 17);
+}
+#availableSizes {
+  border: 2px solid gray;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 135px;
+  text-align: center;
+  margin-right: 3px;
+}
+#availableSizes:hover {
+  outline: 1px solid rgb(17, 17, 17);
+}
+
+#addToBag {
+  width: 50%;
+  background-color: #000;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 115px;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+#addToBag:hover {
+  scale: 1.1;
+  & i {
+    transform: rotate(360deg);
+    color: aqua;
+  }
+}
+
+#favourite {
+  width: 50%;
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  margin-left: 115px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  transition: all 0.5s ease-in-out;
+}
+
+#favourite:hover {
+  scale: 1.1;
+  & i {
+    transform: rotate(360deg);
+    color: rgb(255, 0, 0);
+    scale: 1.5 1.5;
+  }
+}
+#newProducts {
+}
+#ProductSection {
+  flex: 0 0 auto;
+  width: 32% !important;
+}
+#seperator {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: auto;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://static.nike.com/a/images/w_1920,c_limit,f_auto,q_auto/24ae54a0-4dbb-48dd-8964-fb0d4c588d6f/image.jpg);
+}

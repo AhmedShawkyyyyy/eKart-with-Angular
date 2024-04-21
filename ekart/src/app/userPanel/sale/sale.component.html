@@ -1,0 +1,326 @@
+<app-topheader></app-topheader>
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-10 d-flex flex-wrap justify-content-center align-items-center m-auto">
+      <div class="smallImagesGallary d-flex flex-nowrap justify-content-center" id="smallImagesGallary">
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-1.png')" src="assets/images/sales/small-1.png"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-2.jpeg')" src="assets/images/sales/small-2.jpeg"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-4.jpeg')" src="assets/images/sales/small-4.jpeg"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-5.jpeg')" src="assets/images/sales/small-5.jpeg"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-6.png')" src="assets/images/sales/small-6.png"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-7.jpeg')" src="assets/images/sales/small-7.jpeg"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-8.jpeg')" src="assets/images/sales/small-8.jpeg"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-9.jpeg')" src="assets/images/sales/small-9.jpeg"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-10.png')" src="assets/images/sales/small-10.png"
+            alt="" id="smallImages">
+        </div>
+        <div class="smallImageSection">
+          <img (mouseenter)="updateImages('assets/images/sales/small-11.png')" src="assets/images/sales/small-11.png"
+            alt="" id="smallImages">
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-12 col-sm-12 bigImageGallery" id="bigImageGallery">
+        <img #bigImage src="assets/images/sales/big-1.jpeg" alt="" class="img-fluid">
+      </div>
+
+
+
+      <div class="col-lg-5 col-md-9 col-sm-12 ms-5 text-start" id="details">
+
+        <div class="row">
+          <p [ngStyle]="{color: '#FF5000'}">Sustainable Materials
+          </p>
+        </div>
+        <div class="row">
+          <h2><b>Nike Air Max Dn</b>
+          </h2>
+          <p>Shoes
+          </p>
+        </div>
+        <div class="row">
+          <p>$160 <span class="me-1" [ngStyle]="{color: 'gray'}"></span>
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <img class="shoeColor" id="shoeColor" src="assets/images/sales/big-1.jpeg" alt=""
+              (mouseenter)="updateImages('assets/images/sales/big-1.jpeg')">
+
+
+
+
+            <img class="shoeColor" id="shoeColor" (mouseenter)="updateImages('assets/images/sales/small-10.png')"
+              src="assets/images/sales/small-10.png" alt="">
+
+
+            <img class="shoeColor" id="shoeColor" (mouseenter)="updateImages('assets/images/sales/small-12.png')"
+              src="assets/images/sales/small-12.png" alt="">
+
+            <img class="shoeColor" id="shoeColor" (mouseenter)="updateImages('assets/images/sales/small-13.png')"
+              src="assets/images/sales/small-13.png" alt="">
+            <img class="shoeColor" id="shoeColor" (mouseenter)="updateImages('assets/images/sales/small-14.png')"
+              src="assets/images/sales/small-14.png" alt="">
+            <img class="shoeColor" id="shoeColor" (mouseenter)="updateImages('assets/images/sales/small-15.png')"
+              src="assets/images/sales/small-15.png" alt="">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-6 p-2 ms-3" [ngStyle]="{'backGround-color': '#F5F5F5'}">
+            <p>This product is made with at least 20% recycled content by weight
+            </p>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <h3>Select Size</h3>
+          <div class="col-lg-12 col-md-12 col-sm-12 d-flex flex-wrap justify-content-start ">
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 4 / W 5.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 4.5 / W 6</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 5 / W 6.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 5.5 / W 7</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 6 / W 7.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 6.5 / W 8</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 7 / W 8.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 7.5 / W 9</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 8 / W 9.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 8.5 / W 10</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 9 / W 10.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 9.5 / W 11</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 10 / W 11.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 10.5 / W 12</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 11 / W 12.5</label>
+            <!-- <label class="mt-1" for="availableSizes" id="availableSizes">M 11.5 / W 13</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 12 / W 13.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 12.5 / W 14</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 13 / W 14.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 13.5 / W 15</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 14 / W 15.5</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 14.5 / W 16</label>
+            <label class="mt-1" for="availableSizes" id="availableSizes">M 15 / W 16.5</label>  -->
+
+
+          </div>
+        </div>
+        <!-- <div class="row mt-4">
+          <button class="btn mt-2" id="addToBag">add to Bag <i class="fa-solid fa-bag-shopping ms-2"></i></button>
+          <button class="btn mt-2" id="favourite">Favourite<i class="fa-regular fa-heart ms-2"></i></button>
+        </div> -->
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<div data-aos="zoom-in" data-aos-duration="1000" class="col-12 mb-5" id="seperator"></div>
+
+<div class="col-12">
+  <div class="title">
+    <h2>You Might Also Like</h2>
+  </div>
+  <div class="newProducts d-flex flex-wrap justify-content-center align-items-center" id="#newProducts">
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class=" img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/skwgyqrbfzhu6uyeh0gg/air-max-270-mens-shoes-KkLcGR.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div>
+    <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0cd78d1b-b5e7-4a5a-891d-062195ea8bfc/pegasus-40-mens-road-running-shoes-zD8H1c.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div>
+    <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ad43263b-15ec-4d67-a311-eb11433dcc29/free-metcon-5-mens-workout-shoes-H0Qszz.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div>
+    <!-- ============= --> <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class=" img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6a1fb8a8-9783-42bb-a05c-cd89c18786ee/metcon-9-mens-workout-shoes-Tc42zx.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div> <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6b19f640-f8fb-4c94-b580-ef32ae9ecd68/air-zoom-maxfly-track-field-sprinting-spikes-C2ZBRP.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div> <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6c221f0e-971b-4ecc-a982-1ca2ab371ed3/ja-1-bite-basketball-shoes-bCx2W3.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div> <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class=" img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fcd04af1-7e94-4e9b-8a06-3f6ce6066c32/superfly-9-elite-mercurial-dream-speed-fg-high-top-soccer-cleats-sb8gJK.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div> <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/21beed00-f374-447b-91e1-d7f7ec49b7f8/mercurial-superfly-9-elite-firm-ground-high-top-soccer-cleats-sb8gJK.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div> <!-- ============= -->
+    <div class="m-1 " id="ProductSection" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="img">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f2f78018-9b2a-43d3-a922-387ed09a854c/mercurial-superfly-9-elite-firm-ground-high-top-soccer-cleats-sb8gJK.png"
+          alt="" class="img-fluid rounded-1">
+      </div>
+      <div>
+        <span class="mt-2 mb-1 p-1">Nike Dunk Low </span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray'}">Men's Shoes</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1">$ 150.97</span>
+      </div>
+      <div>
+        <span class="mt-1 mb-1 p-1" [ngStyle]="{'color': 'gray' , 'text-decoration':'line-through'}">$ 190</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

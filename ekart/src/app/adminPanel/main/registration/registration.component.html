@@ -1,0 +1,109 @@
+<!-- <div class="container">
+  <div class="card bg-dark text-light">
+    <div class="card-body">
+      <h3>Registiration</h3>
+      <form action="">
+        <div class="form-group mb-2">
+          <label for="" class="form-label">Name</label>
+          <input type="text" class="form-control" #name="ngModel" [(ngModel)]="user.name" name="name">
+          <span class="mt-5" [ngStyle]="{color:'red'}" *ngIf="name.touched">
+            *this field is important to type</span>
+        </div>
+        <div class=" form-group mb-2">
+          <label for="" class="form-label">email</label>
+          <input type="text" class="form-control" #email="ngModel" [(ngModel)]="user.email" name="email">
+          <span class="mt-3" [ngStyle]="{color:'red'}" *ngIf="email.touched"></span>
+        </div>
+        <div class=" form-group mb-2">
+          <label for="" class="form-label">Password</label>
+          <input for="password" type="password" class="form-control" #password="ngModel" [(ngModel)]="user.password"
+            name="password">
+          <span class="mt-3" [ngStyle]="{color:'red'}" *ngIf="password.touched"></span>
+        </div>
+        <div class="form-group mt-4 text-center">
+          <button class="btn btn-primary" (click)="submit()">Supmit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="wrapper" style="background-image: url('assets/images/registiration/bg-registration-form-1.jpg');">
+  <div class="inner">
+    <div class="image-holder">
+      <img src="assets/images/registiration/registration-form-1.jpg" alt="">
+    </div>
+    <form action="" id="form">
+      <h3>Registration Form</h3>
+      <div class="form-group">
+        <input type="text" placeholder="First Name" class="form-control" #firstname="ngModel"
+          [(ngModel)]="user.firstname" name="firstname"
+          [style.border-bottom]="firstname.touched && !firstname.value ? ' 1px solid red ':''">
+        <input type="text" placeholder="Last Name" class="form-control" #lastname="ngModel" [(ngModel)]="user.lastname"
+          name="lastname" [style.border-bottom]="lastname.touched && !lastname.value ? ' 1px solid red ':''">
+      </div>
+      <div class=" form-wrapper">
+        <input type="text" placeholder="Username" class="form-control" #username="ngModel" [(ngModel)]="user.username"
+          name="username" [style.border-bottom]="username.touched && !username.value ? ' 1px solid red ':''">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="d-block " [ngStyle]="{color: 'red'}" *ngIf="username.touched && !username.value"><span>*this field is
+          required</span>
+      </div>
+      <div class="form-wrapper">
+        <input type="text" placeholder="Email Address" class="form-control" #email="ngModel" [(ngModel)]="user.email"
+          name="email" [style.border-bottom]="email.touched && !email.value ? ' 1px solid red ':''">
+        <i class=" fa-solid fa-envelope"></i>
+      </div>
+      <div class="d-block " [ngStyle]="{color: 'red'}" *ngIf="email.touched && !email.value"><span>*this field is
+          required</span>
+      </div>
+      <div class="form-wrapper">
+        <select id="" class="form-control" name="gender" #gender="ngModel" [(ngModel)]=" user.gender"
+          (click)="onGenderChange(user.gender)">
+          <option value="" disabled selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="femal">Female</option>
+        </select>
+        <i class="fa-solid fa-caret-down"></i>
+      </div>
+      <div class="d-block " [ngStyle]="{color: 'red'}" *ngIf="gender.touched  && !gender.value"><span>*this field is
+          required</span>
+      </div>
+      <div class="form-wrapper">
+        <input type="password" placeholder="Password" class="form-control" #password="ngModel"
+          [(ngModel)]="user.password" name="password"
+          [style.border-bottom]="password.touched && !password.value ? ' 1px solid red ':''" minlength="7">
+        <span *ngIf="password.errors" [ngStyle]="{color:'red'}">Passwords must be more than 7 char.</span>
+        <i class=" fa-solid fa-lock"></i>
+        <div class="d-block " [ngStyle]="{color: 'red'}" *ngIf="password.touched && !password.value "><span>*this field
+            is
+            required</span>
+        </div>
+      </div>
+      <div class="form-wrapper">
+        <input type="password" placeholder="Confirm Password" class="form-control" #confirmpassword="ngModel"
+          [(ngModel)]="user.confirmpassword" name="confirmpassword"
+          [style.border-bottom]="confirmpassword.touched && !firstname.value ? ' 1px solid red ':''" minlength="7">
+        <!-- <span *ngIf="confirmpassword.errors" [ngStyle]="{color:'#1d628f'}">Passwords must be more than 7 char.</span> -->
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <div class="d-block " [ngStyle]="{color: 'red'}" *ngIf="confirmpassword.touched && !confirmpassword.value ">
+        <span>*this
+          field is
+          required</span>
+      </div>
+      <button (click)="submit()"
+        [disabled]="!firstname.value || !lastname.value|| !email.value||!username.value||!password.value || password.errors">Register
+        <i class=" fa-solid fa-arrow-right"></i>
+      </button>
+    </form>
+    <div class=" successfulRegistiration text-center " id="successfulRegistiration">
+      <img src="assets/images/registiration/icon-complete.svg" alt="">
+      <h3 class="mt-4">Thank you!</h3>
+      <h5 class="mt-4">We've added your account successfully <span> &hearts;</span> </h5>
+    </div>
+  </div>
+
+</div>
